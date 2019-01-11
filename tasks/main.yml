@@ -23,6 +23,7 @@
     - php-mbstring
     - php-mcrypt
     - php-xml
+    - php-ldap
     state: latest
 
 - name: Copy php-fpm config
