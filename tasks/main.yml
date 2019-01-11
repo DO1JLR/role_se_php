@@ -1,10 +1,28 @@
 ---
 
-- name: Install PHP7 on fedora
+- name: Install PHP7 main packages on fedora
   dnf: 
     name:
     - php-fpm
     - php-common
+    state: latest
+
+- name: Install PHP7 modules on fedora
+  dnf: 
+    name:
+    - php-pecl-apcu
+    - php-cli
+    - php-pear
+    - php-pdo
+    - php-mysqlnd
+    - php-pgsql
+    - php-pecl-mongodb
+    - php-pecl-memcache
+    - php-pecl-memcached
+    - php-gd
+    - php-mbstring
+    - php-mcrypt
+    - php-xml
     state: latest
 
 - name: Copy php-fpm config
