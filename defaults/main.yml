@@ -1,0 +1,12 @@
+---
+
+
+# PHP variables
+php:
+  pool: "www"
+  user: "nginx"
+  group: "nginx"
+#  listen: "/run/php-fpm/www.sock"
+  listen: "127.0.0.1:9000"
+  error_log: "/var/log/php-fpm/www-error.log"
+
