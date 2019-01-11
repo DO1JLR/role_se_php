@@ -7,6 +7,14 @@
     - php-common
     state: latest
 
+- name: Copy php-fpm config
+  template:
+    src: templates/php_www.conf
+    dest: /etc/php-fpm.d/www.conf
+    owner: root
+    group: root
+    mode: "u=rw,g=r,o=r"
+
 - name: Start service pgp-fpm, if not started
   service:
     name: php-fpm
