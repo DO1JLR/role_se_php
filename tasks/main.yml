@@ -1,0 +1,19 @@
+---
+
+- name: Install PHP7 on fedora
+  dnf: 
+    name:
+    - php-fpm
+    - php-common
+    state: latest
+
+- name: Start service pgp-fpm, if not started
+  service:
+    name: php-fpm
+    state: started
+
+- name: Restart service nginx
+  service:
+    name: nginx
+    state: restarted
+
